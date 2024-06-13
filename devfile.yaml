@@ -1,6 +1,6 @@
 schemaVersion: 2.2.2
 metadata:
-  name: quarkus-quickstart
+  name: ucdavis-cnprc-barbary-operator
 components:
   - name: tools
     container:
@@ -14,10 +14,10 @@ components:
           protocol: tcp
           targetPort: 5005
         - exposure: public
-          name: hello-greeting
+          name: api-port
           protocol: https
           targetPort: 8080
-          path: /hello/greeting/devspaces-user
+          path: /
       volumeMounts:
         - name: m2
           path: /home/user/.m2
